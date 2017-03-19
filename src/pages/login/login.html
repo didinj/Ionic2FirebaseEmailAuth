@@ -6,7 +6,7 @@
 -->
 
 <ion-content padding>
-  <h2>Please, Login</h2>
+  <h2 text-center>Please, Login</h2>
   <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
     <ion-item>
       <ion-label stacked>Email</ion-label>
@@ -26,15 +26,15 @@
     <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid  && (passwordChanged || submitAttempt)">
       <p>Your password needs more than 6 characters.</p>
     </ion-item>
-    <button ion-button block type="submit">
+    <button ion-button block type="submit" margin-top>
       Login
     </button>
   </form>
 
-  <button ion-button block clear (click)="register()">
+  <button ion-button block clear (click)="register()" color="twitter" margin-top>
     No have an account? Register Now
   </button>
-  <button ion-button block clear (click)="resetPwd()">
+  <button ion-button block clear (click)="resetPwd()" color="twitter">
     Forgot Password
   </button>
 </ion-content>

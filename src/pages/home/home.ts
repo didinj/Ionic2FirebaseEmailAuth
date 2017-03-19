@@ -15,8 +15,13 @@ export class HomePage {
       if (!user) {
         //navCtrl.push(LoginPage);
         navCtrl.setRoot(LoginPage);
+      } else {
+        console.log(user.uid);
       }
     });
+  }
+
+  ionViewDidLoad() {
   }
 
   logout() {
